@@ -118,6 +118,10 @@ p, .Ul{
     transition: box-shadow 0.25s;
 }
 
+.rlLangDiv{
+    width:250px;
+}
+
 .rllangimg{
     width:100%;
     height:100%;
