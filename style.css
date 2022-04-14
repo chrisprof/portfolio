@@ -1,0 +1,56 @@
+@keyframes rainbow {
+    0%{background-color: rgba(224, 181, 255, 0.616);}
+    33%{background-color: rgb(127, 140, 255);}
+    66%{background-color: rgba(179, 255, 136, 0.616);}
+    100%{background-color: rgba(224, 181, 255, 0.616);}
+}
+
+h1{
+    font-family: monospace;
+    color:white;
+    text-align: center;
+    font-size:100px;
+}
+
+p{
+    font-family: monospace;
+    color:white;
+    text-align: center;
+    font-size:50px;
+}
+
+
+#div1{
+    display: block;
+    margin:auto;
+    padding: -500px;
+}
+
+#hvrBtn{
+    background-color:rgb(148, 148, 148);
+    position:relative;
+    display:block;
+    font-family: monospace;
+    font-size:36px;
+    border-radius: 4px;
+    border:none;
+    width:200px;
+    height: 100px;
+    transition: height 0.5s, width 0.5s,font-size 0.5s, content 0.5s;
+    margin:auto;
+    margin-top: 25px;
+
+}
+
+#hvrBtn:hover{
+    font-size: 72px;
+    width:400px;
+    height:200px;
+    animation: rainbow 5s ease-in-out; 
+    animation-iteration-count: infinite;
+}
+
+
+body{
+    background-color:rgb(24, 24, 24);
+}
