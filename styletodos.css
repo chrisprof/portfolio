@@ -10,6 +10,10 @@ li{
     background-color: gray;
 }
 
+#email{
+    font-size:50px;
+}
+
 @keyframes rainbowCycle{
   0%{color:#FF9AA2}
   7% {color:#FF9AA2;}
@@ -29,7 +33,7 @@ li{
   opacity: 0.5;
   margin-top:10px;
   background-color:rgb(50,50,50);
-  color:white;
+  color:rgb(255, 255, 255);
   font-size:30px;
   width:400px;
   transition: opacity 0.25s;
@@ -65,6 +69,21 @@ body{
     background-color: rgb(30, 30, 30);
     width:210px;
     height:70px;
+}
+
+
+@media screen and (min-width:1280px){
+    #projects{
+        width:55%;
+    }
+
+    #projCont{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width:100%;
+    }
 }
 
 .titles
@@ -109,7 +128,7 @@ p, .Ul{
 .langDiv, .rlLangDiv{
     display:flex;
     margin-bottom: 4%;
-    background-color: aliceblue;
+    background-color: rgb(21, 21, 21);
     width:200px;
     justify-content: center;
     align-items: center;
@@ -131,6 +150,11 @@ p, .Ul{
     float:left;
 }
 
+#eng{
+    display:block;
+    object-position: center;
+}
+
 .langDiv img{
     width: auto;
     height:100px;
@@ -143,6 +167,11 @@ p, .Ul{
 
 #js{
     border-radius: inherit;
+    height:90px;
+}
+
+#csharp{
+    height:150px;
 }
 
 .parLangDiv{
