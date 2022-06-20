@@ -130,15 +130,6 @@ body{
   animation-duration: 1s;
 }
 
-#navDiv{
-    background-color: rgb(10, 10, 10);
-    position:relative;
-    display:block;
-    width:100%;
-    height: auto;
-    margin:-10px;
-}
-
 h1{
     font-size:100px;
     color:white;
@@ -220,6 +211,17 @@ p, .Ul{
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.10;
+    z-index: -9999;
+  }
 
 .cat{
  width:50%;
