@@ -11,7 +11,7 @@ domelem.class="hello"
 document.body.appendChild( domelem );
 
 var geometry = new THREE.IcosahedronGeometry( 2 );
-var material = new THREE.MeshStandardMaterial( { color: 0xB026FF } );
+var material = new THREE.MeshStandardMaterial( { color: 0xB026FF, wireframe:true} );
 var shape= new THREE.Mesh( geometry, material );
 
 var pointlight = new THREE.PointLight( 0xffffff)
@@ -35,7 +35,7 @@ var animate = function () {
 
     document.addEventListener('scroll',function(e){
         camera.position.z=(window.scrollY/window.innerHeight)+cameraStartPosition
-        console.log(window.scrollY/window.outerHeight)
+        console.log(window.scrollY/window.screenY)
     })
 
 	renderer.render( scene, camera );
