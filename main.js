@@ -1,7 +1,7 @@
 import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.module.js"
 
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 70, window.innerWidth/window.innerHeight, 1, 1000 );
+var camera = new THREE.PerspectiveCamera( 70, window.innerWidth/window.innerHeight, 0.001, 1000 );
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
@@ -10,23 +10,31 @@ let domelem = renderer.domElement
 domelem.class="hello"
 document.body.appendChild( domelem );
 
-var geometry = new THREE.BoxGeometry( 2, 2, 2 );
-var material = new THREE.MeshBasicMaterial( { color: 0xC8A2C8 } );
-var cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+var geometry = new THREE.IcosahedronGeometry( 2 );
+var material = new THREE.MeshStandardMaterial( { color: 0xB026FF } );
+var shape= new THREE.Mesh( geometry, material );
 
-camera.position.z = 10;
+var pointlight = new THREE.PointLight( 0xffffff)
+pointlight.position.set(15,15,15)
+
+var ambientlight = new THREE.AmbientLight( 0xfffffff)
+
+scene.add(ambientlight, shape, pointlight)
+
+let cameraStartPosition = 10
+
+camera.position.z=(window.scrollY/window.innerHeight)+cameraStartPosition
 
 var animate = function () {
 	requestAnimationFrame( animate );
 
     document.addEventListener('mousemove',function(e){
-        cube.rotation.x=e.clientY/525
-        cube.rotation.y=e.clientX/525
+        shape.rotation.x=e.clientY/525
+        shape.rotation.y=e.clientX/525
     })
 
     document.addEventListener('scroll',function(e){
-        camera.position.z=(window.scrollY/window.innerHeight)+5
+        camera.position.z=(window.scrollY/window.innerHeight)+cameraStartPosition
         console.log(window.scrollY/window.outerHeight)
     })
 
