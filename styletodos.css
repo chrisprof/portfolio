@@ -1,154 +1,4 @@
-ul{
-    list-style-type: none;
-    padding:0.25%;
-}
-
-footer{
-    background-color: #050505;
-    width:100%;
-    padding-bottom: 3%;
-    margin:0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-#otherSkills{
-    margin-bottom: 5%;
-}
-
-.link{
-    transition: all 0.25s;
-    color:#404040;
-}
-
-.icon{
-    width:75px;
-    height:75px;
-    margin:3%;
-}
-
-.footer-child-cont{
-    width:100%;
-    display: inherit;
-    justify-content: center;
-}
-
-.link:hover{
-    color: #B5EAD7;
-}
-
-li{
-    display: inline;
-    margin-right: 50px;
-    background-color: gray;
-}
-
-a:visited,
-a:link{
-    text-decoration: none;
-}
-
-#email{
-    font-size:50px;
-}
-
-@keyframes rainbowCycle{
-  0%{color:#FF9AA2}
-  7% {color:#FF9AA2;}
-  21%{color:#FFB7B2;}
-  36%{color: #FFDAC1;}
-  50%{color: #E2F0CB;}
-  64%{color: #B5EAD7;}
-  79%{color: #C7CEEA;}
-  100% {color:#FF9AA2;}
-            }
-            
-
-#real-world{
-    font-size: 50px;
-}
-
-body{
-    background-color: rgb(14, 14, 14);
-    margin:0;
-    padding:0;
-}
-
-.btn{
-    background-color: rgb(15,15,15);
-    color:white;
-    border:none;
-    border-radius: 4px;
-    width:180px;
-    height:60px;
-    transition: background-color 0.25s, width 0.25s, height 0.25s;
-    font-family: monospace;
-    margin: 12.5px;
-    font-size: 25px;
-}
-
-.btn:hover{
-    background-color: rgb(30, 30, 30);
-    width:210px;
-    height:70px;
-}
-
-
-    #projects{
-        width:55%;
-    }
-
-    #projCont{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        width:100%;
-        height:400px;
-        overflow: hidden;
-        background-color: #E2F0CB;
-    }
-
-    #projImg{
-        width:50px;
-        height: 50px;;
-        border-radius: 14px;
-    }
-
-#nextBtn{
-    position:absolute;
-    margin-left: 50%;
-    border: none;
-    border-radius: 5px;
-    width:150px;
-    height:80px;
-    transition: all 0.5s;
-    background-color: #050505;
-    color: #ffffff;
-}
-
-#viewBtn{
-    border: none;
-    margin-top: 2%;
-    border-radius: 5px;
-    margin-bottom: 0;
-    width: 75px;
-    height:40px;
-    transition: all 0.25s;
-    background-color: #050505;
-    color: #ffffff;
-}
-
-#nextBtn:hover,#viewBtn:hover{
-    box-shadow:3px 3px 0px #000000;
-}
-
-.titles
-{
-  animation-name: rainbowCycle;
-  animation-iteration-count: infinite;
-  animation-duration: 1s;
-}
+/* Generalized Styles */
 
 h1{
     font-size:100px;
@@ -170,12 +20,156 @@ h2{
     text-align: center;
 }
 
-p, .Ul{
+p, ul{
     font-size:35px;
     color:white;
     font-family: monospace;
     text-align: center;
 }   
+
+li{
+    display: inline;
+    margin-right: 50px;
+    background-color: gray;
+}
+
+footer{
+    background-color: #050505;
+    width:100%;
+    padding-bottom: 3%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000000;
+}
+
+a:visited,
+a:link{
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(14, 14, 14);
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+/* Canvas for Three.js Background */
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: -9999;
+  }
+
+/* CSS Animations */
+
+@keyframes rainbowCycle{
+    0%{color:#FF9AA2}
+    7% {color:#FF9AA2;}
+    21%{color:#FFB7B2;}
+    36%{color: #FFDAC1;}
+    50%{color: #E2F0CB;}
+    64%{color: #B5EAD7;}
+    79%{color: #C7CEEA;}
+    100% {color:#FF9AA2;}
+}
+/* Footer */
+
+.footer-link{
+    transition: all 0.25s;
+    color:#404040;
+}
+
+.footer-link:hover{
+    color: #B5EAD7;
+}
+
+.footer-icon{
+    width:75px;
+    height:75px;
+    margin:3%;
+}
+
+.footer-child-cont{
+    width:100%;
+    display: inherit;
+    justify-content: center;
+}
+
+/* Projects Div */
+
+#projects{
+    width:55%;
+}
+
+#proj-cont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:400px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #E2F0CB;
+}
+
+#proj-image{
+    width:100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+#next-btn{
+    position:absolute;
+    margin-left: 50%;
+    border: none;
+    border-radius: 5px;
+    width:50px;
+    height:30px;
+    transition: all 0.5s;
+    background-color: #050505;
+    color: #ffffff;
+}
+
+#view-btn{
+    border: none;
+    margin-top: 2%;
+    border-radius: 5px;
+    margin-bottom: 0;
+    width: 75px;
+    height:40px;
+    transition: all 0.25s;
+    background-color: #050505;
+    color: #ffffff;
+}
+
+.proj-div-btn:hover{
+    box-shadow:3px 3px 0px #000000;
+}
+
+#proj-cont-child-title{
+    background-color: #121212;
+    position: absolute;
+    width:15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:7.5%;
+    border-radius: 6px;
+    color:white;
+    text-align: center;
+    margin-bottom: 25%;
+}
+
+/* Language Divs */
 
 .langDiv, .rlLangDiv{
     display:flex;
@@ -186,11 +180,18 @@ p, .Ul{
     align-items: center;
     border-radius: 18px;
     height:150px;
-    transition: box-shadow 0.25s;
+    transition: all 0.25s;
+}
+
+.parLangDiv{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .rlLangDiv{
     width:250px;
+    margin:0;
 }
 
 .rllangimg{
@@ -217,40 +218,44 @@ p, .Ul{
     box-shadow: rgb(40, 40, 40) 4px 4px;
 }
 
+#csharp{
+    height:150px;
+}
+
 #js{
     border-radius: inherit;
     height:90px;
 }
 
-#csharp{
-    height:150px;
-}
-
-.parLangDiv{
-    display:flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-canvas {
-    width: 100vw;
-    height: 100vh;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 0.25;
-    z-index: -9999;
-  }
-
-.cat{
- width:50%;
- display:block;
-  text-align:center;
- margin:auto;   
-}
-
-
 #sql, #kotlin{
     height:60px;
+}
+
+#react{
+    height: 75px;
+}
+
+/* End */
+
+#otherSkills{
+    margin-bottom: 5%;
+}
+
+#experience{
+    width:60%;
+}
+
+.titles
+{
+  animation-name: rainbowCycle;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+/* Div Centering Class */
+.cat{
+    width:50%;
+    display:block;
+    text-align:center;
+    margin:auto;   
 }

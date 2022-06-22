@@ -3,30 +3,30 @@ function redirect(url)
     window.location.href = url;
 }
 
-function error(err)
-{
-    switch(err){
-        case 'wndw':
-            window.alert("You're already on this window!")
-            break
-    }
-}
+//0 = Names, 1 = Images, 2 = Links | 2D Array
+let info = [['freepages','freepages.png','freepagesjc.web.app'],
+            ['serv','serv.png','serv-3529c.web.app'],
+            ['vhab','vhab.png','www.vhab.xyz'],
+            ['eggman','eggman.png','chrisprof.github.io/eggman/']]
 
-
-let images = ['freepages.png','serv.png','vhab.png','eggman.png']
-let links = ['freepagesjc.web.app','serv-3529c.web.app','www.vhab.xyz','chrisprof.github.io/eggman/']
-var image=1
+var placement=1
 function changeImg()
 {
-    document.getElementById("projImage").src=images[image]
-    document.getElementById("btnAnchor").href='http://'+links[image]
-    console.log(image)
-    if(image==images.length-1)
+    //title 0
+    document.getElementById('proj-cont-child-title').innerHTML=info[placement][0]
+
+    //image 1 
+    document.getElementById("proj-image").src='./static/images/'+info[placement][1]
+
+    //link 2
+    document.getElementById("btn-anchor").href='http://'+info[placement][2]
+    console.log(placement)
+    if(placement==info.length-1)
     {
-        image=0
+        placement=0
     }
     else{
-        image++
+        placement++
     }
 
 }
