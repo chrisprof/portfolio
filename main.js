@@ -11,7 +11,7 @@ domelem.class="hello"
 document.body.appendChild( domelem );
 
 var geometry = new THREE.IcosahedronGeometry( 2 );
-var material = new THREE.MeshStandardMaterial( { color: 0xB026FF, wireframe:true} );
+var material = new THREE.MeshStandardMaterial( { color: Math.random() * 0xffffff, wireframe:true} );
 var shape= new THREE.Mesh( geometry, material );
 
 function rand_int(min, max) {
@@ -55,7 +55,7 @@ var animate = function () {
 
     document.addEventListener('scroll',function(e){
         camera.position.z=(window.scrollY/window.innerHeight)*2+cameraStartPosition
-        camera.rotation.z=(window.scrollY/window.innerHeight)*0.25+cameraStartPosition
+        camera.rotation.z=(window.scrollY/window.innerHeight)*1.2+cameraStartPosition
         console.log(window.scrollY/window.innerHeight)
     })
 
