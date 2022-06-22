@@ -119,7 +119,7 @@ body{
     position:absolute;
     margin-left: 50%;
     border: none;
-    border-radius: 1px;
+    border-radius: 5px;
     width:150px;
     height:80px;
     transition: all 0.5s;
@@ -130,17 +130,17 @@ body{
 #viewBtn{
     border: none;
     margin-top: 2%;
-    border-radius: 1px;
+    border-radius: 5px;
     margin-bottom: 0;
-    width:150px;
-    height:80px;
-    transition: all 0.5s;
+    width: 75px;
+    height:40px;
+    transition: all 0.25s;
     background-color: #050505;
     color: #ffffff;
 }
 
 #nextBtn:hover,#viewBtn:hover{
-    box-shadow:5px 5px 0px #000000;
+    box-shadow:3px 3px 0px #000000;
 }
 
 .titles

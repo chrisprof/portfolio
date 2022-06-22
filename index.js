@@ -15,7 +15,7 @@ function error(err)
 
 let images = ['freepages.png','serv.png','vhab.png','eggman.png']
 let links = ['freepagesjc.web.app','serv-3529c.web.app','www.vhab.xyz','chrisprof.github.io/eggman/']
-var image=0
+var image=1
 function changeImg()
 {
     document.getElementById("projImage").src=images[image]
