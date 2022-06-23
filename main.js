@@ -22,22 +22,22 @@ function rand_int(min, max) {
 
 function create_stars(stars){
     for(var i=0; i<stars+1;i++){
-        let geometry = new THREE.TetrahedronGeometry( 0.1, 3)
-        let material = new THREE.MeshBasicMaterial( {color:Math.random() * 0xffffff})
+        let geometry = new THREE.TetrahedronGeometry( 0.15, 3)
+        let material = new THREE.MeshStandardMaterial( {color:Math.random() * 0xffffff})
         let shape = new THREE.Mesh(geometry,material)
         shape.position.set(rand_int(-20,20),rand_int(-20,20),rand_int(-20,20))
         scene.add(shape)
     }
 }
 
-create_stars(50)
+create_stars(20)
 console.log(rand_int(10))
 
 var pointlight = new THREE.PointLight( 0xffffff)
 pointlight.position.set(15,15,15)
 
 var ambientlight = new THREE.AmbientLight( 0xffffff)
-
+ambientlight.castShadow=true
 scene.add(ambientlight, shape, pointlight)
 
 let cameraStartPosition = 10
