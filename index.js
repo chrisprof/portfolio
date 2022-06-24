@@ -19,7 +19,6 @@ function changeImg()
 
     //link 2
     document.getElementById("btn-anchor").href='http://'+info[placement][2]
-    console.log(placement)
     if(placement==info.length-1)
     {
         placement=0

@@ -1,7 +1,7 @@
 import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.module.js"
 
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 90, window.innerWidth/window.innerHeight, 0.001, 1000 );
+var camera = new THREE.PerspectiveCamera( 100, window.innerWidth/window.innerHeight, 0.00000001, 10000000000 );
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
@@ -10,8 +10,8 @@ let domelem = renderer.domElement
 domelem.class="hello"
 document.body.appendChild( domelem );
 
-var geometry = new THREE.IcosahedronGeometry( 2 );
-var material = new THREE.MeshStandardMaterial( { color: Math.random() * 0xffffff, wireframe:true} );
+var geometry = new THREE.IcosahedronGeometry(5);
+var material = new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff, wireframe:true} );
 var shape= new THREE.Mesh( geometry, material );
 
 function rand_int(min, max) {
@@ -21,24 +21,18 @@ function rand_int(min, max) {
   }
 
 function create_stars(stars){
+    let geometry = new THREE.TetrahedronGeometry(0.5)
     for(var i=0; i<stars+1;i++){
-        let geometry = new THREE.TetrahedronGeometry( 0.15, 3)
-        let material = new THREE.MeshStandardMaterial( {color:Math.random() * 0xffffff})
+        let material = new THREE.MeshBasicMaterial( {color:Math.random() * 0xffffff, wireframe:true})
         let shape = new THREE.Mesh(geometry,material)
-        shape.position.set(rand_int(-20,20),rand_int(-20,20),rand_int(-20,20))
+        shape.position.set(rand_int(-150,150),rand_int(-150,150),rand_int(-150,150))
+        shape.rotation.set(rand_int(-150,150),rand_int(-150,150),rand_int(-150,150))
         scene.add(shape)
     }
 }
 
-create_stars(20)
-console.log(rand_int(10))
-
-var pointlight = new THREE.PointLight( 0xffffff)
-pointlight.position.set(15,15,15)
-
-var ambientlight = new THREE.AmbientLight( 0xffffff)
-ambientlight.castShadow=true
-scene.add(ambientlight, shape, pointlight)
+create_stars(200)
+scene.add(shape)
 
 let cameraStartPosition = 10
 
@@ -54,9 +48,8 @@ var animate = function () {
     })
 
     document.addEventListener('scroll',function(e){
-        camera.position.z=(window.scrollY/window.innerHeight)*2+cameraStartPosition
-        camera.rotation.z=(window.scrollY/window.innerHeight)*1.2+cameraStartPosition
-        console.log(window.scrollY/window.innerHeight)
+        camera.position.z=(window.scrollY/window.innerHeight)*7.5+cameraStartPosition
+        camera.rotation.z=(window.scrollY/window.innerHeight)*0.5+cameraStartPosition
     })
 
 	renderer.render( scene, camera );

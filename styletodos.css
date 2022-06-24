@@ -65,7 +65,7 @@ canvas {
     position: fixed;
     top: 0;
     left: 0;
-    opacity: 0.2;
+    opacity: 0.3;
     z-index: -9999;
   }
 
@@ -95,7 +95,7 @@ canvas {
 .footer-icon{
     width:75px;
     height:75px;
-    margin:3%;
+    margin:2%;
 }
 
 .footer-child-cont{
@@ -107,7 +107,7 @@ canvas {
 /* Projects Div */
 
 #projects{
-    width:55%;
+    width:56%;
 }
 
 #proj-cont{
