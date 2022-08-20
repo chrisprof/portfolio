@@ -6,7 +6,8 @@ function redirect(url)
 //0 = Names, 1 = Images, 2 = Links | 2D Array
 let info = [['freepages','freepages.png','freepagesjc.web.app'],
             ['serv','serv.png','serv-3529c.web.app'],
-            ['eggman','eggman.png','chrisprof.github.io/eggman/']]
+            ['eggman','eggman.png','chrisprof.github.io/eggman/'],
+            ['vhab','vhab.png','www.vhab.xyz']]
 
 var placement=1
 function changeImg()
